@@ -1,5 +1,14 @@
 import React from "react";
-function Register(){
-    return 
+import Styles from "../Register/Register.module.css"
+import LeftBanner from "../../components/LeftBanner/LeftBanner";
+import RegisterForm from "../../components/RegisterForm/RegisterForm";
+
+function Register() {
+    return (
+        <div className={Styles.Container}>
+            <LeftBanner />
+            <RegisterForm />
+        </div>
+    )
 }
 export default Register;

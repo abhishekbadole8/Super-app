@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    right: 0;
+    background-color: black;
+    width: 50%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+}
+
+h3 {
+    font-family: 'Single Day', cursive;
+    font-weight: 400;
+    font-size: 67px;
+    line-height: 139.69%;
+    margin-top: 10px;
+    color: #72DB73;
+    margin-bottom: 5px;
+}
+
+.aCreate {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 139.69%;
+    color: #FFFFFF;
+}
+
+.socialText {
+    justify-content: center;
+    font-family: 'DM Sans';
+    font-style: normal;
+    color: #FFFFFF;
+    display: flex;
+    font-weight: 500;
+    font-size: 28.8485px;
+    line-height: 139.69%;
+    margin-top: 16px;
+    gap: 24px;
+}
+
+.socialText:focus {
+    color: red;
+}
+
+.formDiv {
+    margin-top: 15px;
+}
+
+.formDiv input {
+    display: flex;
+    padding-left: 10px;
+    margin-top: 14px;
+    border: none;
+    width: 30vw;
+    height: 63px;
+    background: #292929;
+    border-radius: 3.81584px;
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 20.0331px;
+    line-height: 139.69%;
+    letter-spacing: 0.02em;
+    color: #7C7C7C;
+}
+/* .for */
+
+.checkboxDiv {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.checkboxDiv label {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 20.0331px;
+    line-height: 139.69%;
+    letter-spacing: 0.02em;
+    color: #7C7C7C;
+}
+
+#tickOk {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    background: #D9D9D9;
+}
+
+.signUp {
+    width: 30vw;
+    height: 55px;
+    background: #72DB73;
+    border-radius: 28px;
+    line-height: 108.69%;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    font-size: 29px;
+    color: #FFFFFF;
+}
+
+.tandc {
+    font-family: 'Roboto', sans-serif;
+    line-height: 141.7%;
+    letter-spacing: 0.02em;
+    color: #7C7C7C;
+    display: flex;
+    flex-direction: column;
+}
+
+.tandc p {
+    margin-top: 15px;
+}
+
+.tandc a,
+.bar {
+    color: #72DB73;
+}
+
+.errTag {
+    color: red;
+    font-family: 'Roboto', sans-serif;
+}

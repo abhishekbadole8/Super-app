@@ -1,5 +1,7 @@
 import React from 'react';
-import './App.css';
+import Register from "../src/pages/Register/Register"
+import Onbording from "./pages/Onboarding/Onboarding"
+
 
 function App() {
   return (

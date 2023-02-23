@@ -1,0 +1,58 @@
+.Container {
+    left: 0;
+    font-family: 'Roboto';
+}
+
+.Container {
+    width: 50%;
+    position: absolute;
+    height: 100%;
+}
+
+.lColDiv {
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    gap: 420px;
+    margin-top: 70px;
+}
+
+.lColDiv h6 {
+    position: relative;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 55px;
+    line-height: 141.69%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.lUpperTag {
+    display: flex;
+    position: relative;
+    gap: 45px;
+    align-items: center;
+}
+
+.lUpperTag p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 108.69%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.logIn {
+    border: none;
+    background: #72DB73;
+    border-radius: 33px;
+    width: 146px;
+    height: 42px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 108.69%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
