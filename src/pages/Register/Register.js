@@ -5,7 +5,7 @@ import RegisterForm from "../../components/RegisterForm/RegisterForm";
 
 function Register() {
     return (
-        <div className={Styles.Container}>
+        <div className={Styles.rContainer}>
             <LeftBanner />
             <RegisterForm />
         </div>

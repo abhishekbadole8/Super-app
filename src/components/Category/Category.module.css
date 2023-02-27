@@ -1,0 +1,68 @@
+.leftContainer {
+    width: 25vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-left: 20px;
+}
+
+.logo {
+    font-family: 'Single Day';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 71px;
+    line-height: 139.69%;
+    color: #72DB73;
+    margin-top: 75px;
+}
+
+.heading {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 139.69%;
+    color: #FFFFFF;
+}
+
+.tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.CategoryTags {
+    width: 10vw;
+    height: 2.75vw;
+    background: #148A08;
+    border-radius: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+.CategoryName {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 105.69%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.CategoryNameCancel {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 105.69%;
+    letter-spacing: 0.02em;
+    color: #085C00;
+}
+
+.CategoryNameCancel:hover {
+    color: red;
+    cursor: pointer;
+}

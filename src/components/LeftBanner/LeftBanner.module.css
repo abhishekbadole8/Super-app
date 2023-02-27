@@ -1,9 +1,5 @@
 .Container {
-    left: 0;
     font-family: 'Roboto';
-}
-
-.Container {
     width: 50%;
     position: absolute;
     height: 100%;
@@ -30,8 +26,8 @@
 .lUpperTag {
     display: flex;
     position: relative;
-    gap: 45px;
     align-items: center;
+    gap: 45px;
 }
 
 .lUpperTag p {

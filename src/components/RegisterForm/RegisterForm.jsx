@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Styles from "./RegisterForm.module.css";
+import { Outlet, Link } from "react-router-dom";
 
 function RegisterForm() {
   const inputData = {
@@ -37,7 +38,7 @@ function RegisterForm() {
     if (getValue.phone === "") {
       err.phone = "Mobile Number required  !!";
     }
-    if (getValue.tick == false) {
+    if (getValue.tick === false) {
       err.tick = "Tick Required !!";
     }
 
@@ -53,16 +54,20 @@ function RegisterForm() {
     let isValid = validateForm();
 
     if (isValid) {
-      console.log("Submitted");
+      // console.log("Submitted");
+      <Link to="/SelectCategory"></Link>
+      // localStorage.setItem("RegistrationForm",getValue)
+
     } else {
       console.log("In-Valid Form");
     }
     console.log(getValue);
+    console.log(localStorage.getItem("RegistrationForm"), "***");
   }
 
   return (
     <div className={Styles.container}>
-      <h3>Super app</h3>
+      <h3 className={Styles.logo}>Super app</h3>
       <p className={Styles.aCreate}>Create your new account</p>
 
       <div className={Styles.socialText}>
@@ -117,12 +122,13 @@ function RegisterForm() {
             />
 
             <label htmlFor="tickOk" className={Styles.errTag}>
-            Share my registration data with Superapp
+              Share my registration data with Superapp
             </label>
           </div>
 
           <div>
-            <button className={Styles.signUp}>SIGN UP</button>
+            <button className={Styles.signUp} >SIGN UP</button>
+           
           </div>
         </form>
 
@@ -145,6 +151,7 @@ function RegisterForm() {
           </p>
         </div>
       </div>
+      {/* <Outlet /> */}
     </div>
   );
 }

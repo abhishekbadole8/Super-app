@@ -1,10 +1,10 @@
 // import React from "react";
 import Styles from "../LeftBanner/LeftBanner.module.css"
-import discoImg from "../img/image 13.png"
+
 function LeftBanner() {
     return (
         <>
-            <img src={discoImg} alt="disco-img" className={Styles.Container} />
+            <img src="/images/image 13.png" alt="disco-img" className={Styles.Container} />
 
             <div className={Styles.lColDiv}>
                 <div className={Styles.lUpperTag}>
