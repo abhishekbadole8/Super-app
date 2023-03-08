@@ -1,9 +1,13 @@
 import React from "react";
 import Styles from "../Cards/Cards.module.css"
 import CategoryArray from "../../pages/SelectCategory/CategoryArray";
+import { useNavigate } from "react-router-dom";
+
 
 // Select Cards
 function Cards({ cards, setCards }) {
+
+    const navigate = useNavigate();
 
     function handelChange(card) {
 
@@ -22,6 +26,17 @@ function Cards({ cards, setCards }) {
             setCards(newCards);
         }
     }
+    
+    const handleClick = () => {
+        if(cards.length>=1){
+            console.log("all ok")
+            localStorage.setItem("CategoryValue", JSON.stringify(cards))
+            navigate("/Homepage");
+        }else{
+            console.log("not ok")
+
+        }
+    }
 
     return (
         <div className={Styles.rightContainer}>
@@ -37,9 +52,11 @@ function Cards({ cards, setCards }) {
                     </button>
                 );
             })}
-            <div className={Styles.btn}>
-                <label>Next Page</label>
+            <div className={Styles.btn} onClick={handleClick}>
+                <label to="/Homepage">Next Page</label>
+                
             </div>
+            {/* <p className={Styles.errorText}>sleedvvdsver</p> */}
         </div>
     )
 }

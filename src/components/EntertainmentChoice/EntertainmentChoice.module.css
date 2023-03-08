@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    gap: 72vw;
+    align-items: center;
+    padding-top: 1.5vh;
+}
+
+.entertainmentContainer {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.navbar h3 {
+    font-family: 'Single Day';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 139.69%;
+    color: #72DB73;
+}
+
+.navbar img {
+    width: 5vw;
+    height: 8.5vh;
+}
+
+.entertainmentContainer h5,
+.entertainmentContainer p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 25px;
+    margin-left: 5vw;
+    margin-bottom: 1.3vh;
+}
+
+.entertainmentContainer h5 {
+    font-weight: 600;
+    line-height: 139.69%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.entertainmentContainer p {
+    font-weight: 500;
+    line-height: 139.69%;
+    letter-spacing: 0.02em;
+    color: #878787;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards img {
+    width: 18.5vw;
+    height: 20vh;
+}

@@ -58,7 +58,17 @@
     margin-top: 25px;
     cursor: pointer;
 }
-
 .btn label {
     cursor: pointer;
 }
+
+
+/* .errorText {
+    color: red;
+    font-size: 20px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+} */

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Styles from "./RegisterForm.module.css";
-import { Outlet, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function RegisterForm() {
+  const navigate = useNavigate();
+
   const inputData = {
     name: "",
     username: "",
@@ -23,6 +25,7 @@ function RegisterForm() {
     setValue({ ...getValue, [e.target.name]: e.target.checked });
   }
 
+  // Validating Form Logic
   const validateForm = () => {
     let err = {};
 
@@ -42,7 +45,6 @@ function RegisterForm() {
       err.tick = "Tick Required !!";
     }
 
-    console.log("Fields Incomplete:", err)
     setFormError({ ...err });
 
     return Object.keys(err).length < 1;
@@ -54,15 +56,12 @@ function RegisterForm() {
     let isValid = validateForm();
 
     if (isValid) {
-      // console.log("Submitted");
-      <Link to="/SelectCategory"></Link>
-      // localStorage.setItem("RegistrationForm",getValue)
-
-    } else {
+      navigate("/selectCategory");
+    }
+    else {
       console.log("In-Valid Form");
     }
-    console.log(getValue);
-    console.log(localStorage.getItem("RegistrationForm"), "***");
+
   }
 
   return (
@@ -126,10 +125,11 @@ function RegisterForm() {
             </label>
           </div>
 
+          {/* Submit Button Here */}
           <div>
-            <button className={Styles.signUp} >SIGN UP</button>
-           
+            <button className={Styles.signUp} to="/SelectCategory" onClick={handelSubmit}>SIGN UP</button>
           </div>
+          
         </form>
 
         <div className={Styles.tandc}>

@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.homePageContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.upperContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3.3vh;
+}
+
+.upperCard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.notesBox {
+    width: 25vw;
+    height: 54vh;
+}
+
+.timerMainContainer {
+    width: 65vw;
+    height: 30.5vh;
+    margin-bottom: 30px;
+}
+
+.hLeftContainer {
+    width: 37vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.browseBtn {
+    width: 10vw;
+    height: 2.75vw;
+    background-color: #148A08;
+    border-radius: 34.7771px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 92.2%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+
+}
+.newsContainer{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: flex-end;
+    gap: 1vh;
+}

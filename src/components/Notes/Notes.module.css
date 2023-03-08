@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.notesContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #F1C75B;
+    border-radius: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+    padding: 0 41px;
+}
+
+.notesContainer textarea {
+    
+    background: none;
+    width: 100%;
+    height: 62%;
+    border:none;
+    outline: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 150.69%;
+    letter-spacing: 0.04em;
+    color: #000000;
+}
+
+.notesContainer h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 105.69%;
+    letter-spacing: 0.02em;
+    color: #000000;
+
+}
+
+.pencilContainer {
+    
+    width: 24%;
+    height: 16%;
+    background-color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

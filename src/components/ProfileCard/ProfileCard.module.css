@@ -1,0 +1,38 @@
+.profileContainer {
+    width: 100%;
+    height: 32vh;
+    background: #5746EA;
+    border-radius: 33.428px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profilePic {
+    width: 7vw;
+    height: 27vh;
+}
+
+.userDetail {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 103.19%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.userDetail:last-child {
+    font-weight: 500;
+    font-size: 72.1341px;
+    line-height: 66.19%;
+}
+
+.valuesContainer {
+    display: flex;
+    flex-direction: column;
+}
