@@ -56,11 +56,15 @@ function RegisterForm() {
     let isValid = validateForm();
 
     if (isValid) {
-      navigate("/selectCategory");
+      // navigate("/selectCategory");
+      localStorage.setItem("formValue",JSON.stringify(getValue))
+      console.log("Is-Valid Form");
     }
     else {
+      
       console.log("In-Valid Form");
     }
+    
 
   }
 

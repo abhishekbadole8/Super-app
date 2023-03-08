@@ -48,7 +48,7 @@ function Cards({ cards, setCards }) {
                         onClick={() => handelChange(card)}
                     >
                         <p>{card.name}</p>
-                        <img src={card.img} />
+                        <img src={card.img} alt=""/>
                     </button>
                 );
             })}

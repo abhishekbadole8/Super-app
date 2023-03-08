@@ -3,11 +3,11 @@ import Styles from "../Timer/Timer.module.css"
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
 
-function Timer({ isPlaying }) {
+function Timer() {
 
     const [hours, setHours] = useState(0)
     const [minutes, setMinutes] = useState(0)
-    const [seconds, setSeconds] = useState(55)
+    const [seconds, setSeconds] = useState(0)
     const [duration, setDuration] = useState({ hours: 0, minutes: 0, seconds: 0 })
 
     function handelClick(e) {
@@ -28,12 +28,11 @@ function Timer({ isPlaying }) {
             // } else {
             //     setDuration(hours - 1)
             // }
-
         }
 
         //minutes
         else if (id == 21) {
-            setDuration['minutes'] = (minutes +1)
+            setDuration['minutes'] = (minutes + 1)
             setMinutes(minutes + 1)
             console.log("Min", id)
         }
@@ -60,9 +59,6 @@ function Timer({ isPlaying }) {
             console.log("Sec", id)
         }
         else { console.log("else") }
-
-
-
     }
 
     const renderTime = ({ remainingTime }) => {
@@ -78,7 +74,7 @@ function Timer({ isPlaying }) {
             </div>
         );
     };
-  
+
 
 
     return (
@@ -93,7 +89,7 @@ function Timer({ isPlaying }) {
                 <div className={Styles.timerwrapper}>
                     <CountdownCircleTimer
                         isPlaying
-                        duration={"hours" + minutes}
+                        duration={duration}
 
                         colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
                         colorsTime={[10, 6, 3, 0]}
