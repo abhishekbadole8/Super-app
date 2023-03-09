@@ -1,8 +1,8 @@
 .Container {
     font-family: 'Roboto';
-    width: 50%;
+    width: 50vw;
     position: absolute;
-    height: 100%;
+    height: 100vh;
 }
 
 .lColDiv {
@@ -51,4 +51,9 @@
     line-height: 108.69%;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+}
+
+.logIn:hover {
+    color: #df5151;
+    font-weight: 600;
 }

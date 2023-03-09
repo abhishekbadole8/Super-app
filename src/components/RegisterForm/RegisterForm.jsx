@@ -26,6 +26,7 @@ function RegisterForm() {
   }
 
   // Validating Form Logic
+
   const validateForm = () => {
     let err = {};
 
@@ -56,15 +57,15 @@ function RegisterForm() {
     let isValid = validateForm();
 
     if (isValid) {
-      // navigate("/selectCategory");
-      localStorage.setItem("formValue",JSON.stringify(getValue))
+      localStorage.setItem("formValue", JSON.stringify(getValue))
+      navigate("/selectCategory");
       console.log("Is-Valid Form");
     }
     else {
-      
+
       console.log("In-Valid Form");
     }
-    
+
 
   }
 
@@ -133,7 +134,7 @@ function RegisterForm() {
           <div>
             <button className={Styles.signUp} to="/SelectCategory" onClick={handelSubmit}>SIGN UP</button>
           </div>
-          
+
         </form>
 
         <div className={Styles.tandc}>
