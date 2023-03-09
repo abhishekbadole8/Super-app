@@ -1,7 +1,9 @@
 import React from "react"
 import Styles from "../ProfileCard/ProfileCard.module.css"
 
-function ProfileCard() {
+function ProfileCard({ state }) {
+
+    const userCategoryChoice = state.cardValue
 
     // from Value
     const getUserDetails = localStorage.getItem("formValue")
@@ -9,7 +11,11 @@ function ProfileCard() {
 
     // Category Value
     const getCategoryValue = localStorage.getItem("CategoryValue")
-    const saveCategoryValue = JSON.parse(getCategoryValue)
+    const saveCategoryValues = JSON.parse(getCategoryValue)
+
+    const handelClick = () => {
+
+    }
 
     return (
         <div className={Styles.profileContainer}>
@@ -17,15 +23,24 @@ function ProfileCard() {
             <div ><img src="/images/image 14.png" className={Styles.profilePic} /></div>
 
             <div className={Styles.valuesContainer}>
+
                 <div className={Styles.userDetail}>
                     <p>{saveUserDetails["name"]}</p>
                     <p>{saveUserDetails["email"]}</p>
                     <p>{saveUserDetails["username"]}</p>
                 </div>
+
                 <div className={Styles.CategorySelect}>
-                
-                    {saveCategoryValue[0].name}
-                   
+
+                    {saveCategoryValues.map((values) => {
+                        return <div key={values.id} className={Styles.CategoryTags}>
+                            <span className={Styles.CategoryName}>{values.name}</span>
+                            <span className={Styles.CategoryNameCancel}
+                                onClick={() => { handelClick(values.id) }}> X
+                            </span>
+                        </div>
+                    })}
+
                 </div>
             </div>
 

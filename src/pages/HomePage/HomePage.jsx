@@ -6,7 +6,7 @@ import DateTimeWeather from "../../components/DateTimeWeather/DateTimeWeather"
 import Notes from "../../components/Notes/Notes";
 import Timer from "../../components/Timer/Timer";
 
-
+import { useLocation } from "react-router-dom";
 
 function HomePage() {
 
@@ -42,7 +42,7 @@ function HomePage() {
                 <NewsSection fullDate={fullDate} getTime={getTime} />
                 <button className={Styles.browseBtn}>Browse</button>
             </div>
-            
+
 
         </div>
     )

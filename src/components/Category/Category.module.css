@@ -17,12 +17,12 @@
     margin-top: 75px;
 }
 
-.heading {
+.heading h2{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 37px;
-    line-height: 139.69%;
+    font-size: 3.7em;
+    line-height: 130%;
     color: #FFFFFF;
 }
 

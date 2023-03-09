@@ -1,13 +1,14 @@
 import React from "react";
 import Styles from "../Cards/Cards.module.css"
 import CategoryArray from "../../pages/SelectCategory/CategoryArray";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 
 // Select Cards
 function Cards({ cards, setCards }) {
 
     const navigate = useNavigate();
+    
 
     function handelChange(card) {
 

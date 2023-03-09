@@ -14,7 +14,7 @@ function DateTimeWeather({ fullDate, getTime }) {
 
     }
 
-    console.log(apiData)
+    // console.log(apiData)
 
     useEffect(() => {
         fetchApiData(API)

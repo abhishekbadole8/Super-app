@@ -1,15 +1,17 @@
 .profileContainer {
     width: 100%;
-    height: 32vh;
+    height: 100%;
     background: #5746EA;
     border-radius: 33.428px;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
     justify-content: space-around;
 }
 
 .profilePic {
-    width: 7vw;
+    width: 6.5vw;
     height: 27vh;
 }
 
@@ -17,22 +19,67 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
-    line-height: 103.19%;
+    font-size: 1.5em;
+    line-height: 100%;
     letter-spacing: 0.02em;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
-    gap: 1vh;
+    gap: .7vh;
 }
 
 .userDetail:last-child {
     font-weight: 500;
-    font-size: 72.1341px;
+    font-size: 70px;
     line-height: 66.19%;
 }
 
 .valuesContainer {
+    width: 25.5vw;
     display: flex;
     flex-direction: column;
+}
+
+/* Categegory values Array */
+
+.CategorySelect {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4vw;
+}
+
+.CategoryTags {
+    width: 6.6vw;
+    height: 2.2vw;
+    background: #148A08;
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.CategoryName {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 105.69%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.CategoryNameCancel {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 105.69%;
+    letter-spacing: 0.02em;
+    color: #085C00;
+}
+
+.CategoryNameCancel:hover {
+    color: red;
+    cursor: pointer;
 }

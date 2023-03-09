@@ -10,6 +10,7 @@ function SelectCategory() {
         <div className={Styles.Container}>
             <Category cards={cards} setCards={setCards} />
             <Cards cards={cards} setCards={setCards} />
+            
         </div>
     )
 }
