@@ -6,8 +6,6 @@ import DateTimeWeather from "../../components/DateTimeWeather/DateTimeWeather"
 import Notes from "../../components/Notes/Notes";
 import Timer from "../../components/Timer/Timer";
 
-import { useLocation } from "react-router-dom";
-
 function HomePage() {
 
     const date = new Date()

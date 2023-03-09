@@ -1,9 +1,7 @@
 import React from "react"
 import Styles from "../ProfileCard/ProfileCard.module.css"
 
-function ProfileCard({ state }) {
-
-    const userCategoryChoice = state.cardValue
+function ProfileCard() {
 
     // from Value
     const getUserDetails = localStorage.getItem("formValue")
@@ -20,7 +18,7 @@ function ProfileCard({ state }) {
     return (
         <div className={Styles.profileContainer}>
 
-            <div ><img src="/images/image 14.png" className={Styles.profilePic} /></div>
+            <div ><img src="/images/image 14.png" className={Styles.profilePic} alt=""/></div>
 
             <div className={Styles.valuesContainer}>
 

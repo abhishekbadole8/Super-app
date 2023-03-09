@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react"
 function DateTimeWeather({ fullDate, getTime }) {
     const [apiData, setApiData] = useState()
 
-    let API = `https://api.weatherapi.com/v1/current.json?key=a1557b06016c487f93180807232802&q=India&aqi=yes`
+    const API = `https://api.weatherapi.com/v1/current.json?key=a1557b06016c487f93180807232802&q=India&aqi=yes`
 
     const fetchApiData = async (url) => {
         const result = await fetch(url);
@@ -33,7 +33,7 @@ function DateTimeWeather({ fullDate, getTime }) {
                         {/* 1. Rain Cloud */}
 
                         < div className={Styles.conditionContainer}>
-                            <img src="/images/HeavyRain.png" />
+                            <img src="/images/HeavyRain.png" alt=""/>
                             <p className={Styles.conditionText}>{apiData.current.condition.text}</p>
                         </div>
 
@@ -44,7 +44,7 @@ function DateTimeWeather({ fullDate, getTime }) {
                         <div className={Styles.tempContainer}>
                             <p className={Styles.tempText}>{apiData.current.temp_c}  C</p>
                             <div className={Styles.pressureContainer}>
-                                <p><img src="/images/PressureImg.png" /></p>
+                                <p><img src="/images/PressureImg.png" alt=""/></p>
                                 <p className={Styles.pressureText}>{apiData.current.pressure_mb} mbar Pressure</p>
                             </div>
                         </div>
@@ -56,8 +56,8 @@ function DateTimeWeather({ fullDate, getTime }) {
                         <div className={Styles.windHumContainer}>
 
                             <div className={Styles.iconContainer}>
-                                <img src="/images/WindImg.png" />
-                                <img src="/images/HumidityImg.png" />
+                                <img src="/images/WindImg.png" alt=""/>
+                                <img src="/images/HumidityImg.png" alt=""/>
                             </div>
 
                             <div className={Styles.TextContainer}>
@@ -67,7 +67,7 @@ function DateTimeWeather({ fullDate, getTime }) {
 
                         </div>
                     </>
-                    : "ok"}
+                    : "All ok, Please Wait "}
             </div>
         </div >
     )
