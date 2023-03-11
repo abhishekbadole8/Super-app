@@ -5,8 +5,11 @@ import NewsSection from "../../components/NewsSection/NewsSection"
 import DateTimeWeather from "../../components/DateTimeWeather/DateTimeWeather"
 import Notes from "../../components/Notes/Notes";
 import Timer from "../../components/Timer/Timer";
+import { useNavigate} from "react-router-dom";
 
 function HomePage() {
+
+    const navigate = useNavigate();
 
     const date = new Date()
     const fullDate = date.getDate() + "-" + date.getMonth() + "-" + date.getFullYear();
@@ -38,7 +41,7 @@ function HomePage() {
 
             <div className={Styles.newsContainer}>
                 <NewsSection fullDate={fullDate} getTime={getTime} />
-                <button className={Styles.browseBtn}>Browse</button>
+                <button to="/Entertainment" className={Styles.browseBtn} onClick={()=>{navigate("/Entertainment"); }}>Browse</button>
             </div>
 
 

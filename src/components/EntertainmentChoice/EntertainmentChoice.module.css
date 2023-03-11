@@ -59,12 +59,22 @@
 
 .cards {
     display: flex;
-    flex-wrap: nowrap;
-}
-
-.cards img {
-    width: 100%;
-    height: 29vh;
-    margin-right:1.9vw;
+    justify-content: center;
+  }
+  
+  .scroll {
+    margin: 4px, 4px;
+    padding: 4px;
+    width: 90%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  
+  .cards img {
+    width: 10.5vw;
+    height: 32vh;
+    margin-right: 1.9vw;
     border-radius: 9.15886px;
-}
+  }
+  

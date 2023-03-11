@@ -43,7 +43,6 @@
 /* Categegory values Array */
 
 .CategorySelect {
-
     display: flex;
     flex-wrap: wrap;
     gap: .4vw;

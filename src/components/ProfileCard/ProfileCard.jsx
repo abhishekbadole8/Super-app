@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Styles from "../ProfileCard/ProfileCard.module.css"
 
 function ProfileCard() {
@@ -9,16 +9,25 @@ function ProfileCard() {
 
     // Category Value
     const getCategoryValue = localStorage.getItem("CategoryValue")
-    const saveCategoryValues = JSON.parse(getCategoryValue)
+    const tempSaveCategoryValues = JSON.parse(getCategoryValue)
 
-    const handelClick = () => {
+    const [saveCategoryValues, setSaveCategoryValues] = useState(
+        tempSaveCategoryValues
+    );
 
+
+    const handelClick = (id) => {
+        const newCategory = saveCategoryValues.filter((category) => {
+            return category.id !== id;
+        });
+        setSaveCategoryValues(newCategory);
+        localStorage.setItem("CategoryValue", JSON.stringify(newCategory));
     }
 
     return (
         <div className={Styles.profileContainer}>
 
-            <div ><img src="/images/image 14.png" className={Styles.profilePic} alt=""/></div>
+            <div ><img src="/images/image 14.png" className={Styles.profilePic} alt="" /></div>
 
             <div className={Styles.valuesContainer}>
 
@@ -29,19 +38,19 @@ function ProfileCard() {
                 </div>
 
                 <div className={Styles.CategorySelect}>
-
-                    {saveCategoryValues.map((values) => {
-                        return <div key={values.id} className={Styles.CategoryTags}>
-                            <span className={Styles.CategoryName}>{values.name}</span>
-                            <span className={Styles.CategoryNameCancel}
-                                onClick={() => { handelClick(values.id) }}> X
-                            </span>
-                        </div>
-                    })}
-
+                    {saveCategoryValues.length !== 0 ?
+                        saveCategoryValues.map((values) => {
+                            return (
+                                <div key={values.id} className={Styles.CategoryTags}>
+                                    <span className={Styles.CategoryName}>{values.name}</span>
+                                    <span className={Styles.CategoryNameCancel}
+                                        onClick={() => { handelClick(values.id) }}> X
+                                    </span>
+                                </div>);
+                        })
+                        : ""}
                 </div>
             </div>
-
         </div>
     )
 }

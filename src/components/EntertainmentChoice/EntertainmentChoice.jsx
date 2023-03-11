@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Styles from "../EntertainmentChoice/EntertainmentChoice.module.css"
 
 function EntertainmentChoice() {
+
+    const navigate = useNavigate()
 
     const [image, setImage] = useState()
 
@@ -16,7 +19,7 @@ function EntertainmentChoice() {
             console.log(error);
         }
     };
-    console.log(image)
+    // console.log(image)
 
     const getPosterURL = (posterpath) => {
         return `https://image.tmdb.org/t/p/original/${posterpath}`;
@@ -31,43 +34,55 @@ function EntertainmentChoice() {
 
             <div className={Styles.navbar}>
                 <h3>Super app</h3>
-                <img src="/images/image ent.png" alt="" />
+                <img src="/images/image ent.png" alt="user-profile" onClick={()=>{navigate("/Homepage")}}/>
             </div>
 
             <h5>Entertainment according to your choice</h5>
 
-            {image !== undefined ?
+            {image !== undefined ? (
                 <>
+                    {/* First Row */}
                     <p>Action</p>
 
                     <div className={Styles.cards}>
-
-                        {image.map((da) => {
-                            return <img src={getPosterURL(da.poster_path)} alt={da.title} key={da.id}/>
-                        })}
-
+                        <div className={Styles.scroll}>
+                            {image.map((da, index) => {
+                                return index < 7 ? (
+                                    <img
+                                        src={getPosterURL(da.poster_path)}
+                                        alt={da.title}
+                                        key={da.id}
+                                    />
+                                ) : (
+                                    ""
+                                );
+                            })}
+                        </div>
                     </div>
 
-                    <p>Action</p>
-
-                    <div className={Styles.cards} >
-
-                        {image.map((da) => {
-                            return <img src={getPosterURL(da.poster_path)} alt={da.title} key={da.id} />
-                        })}
-
-                    </div>
-
+                    {/* Second Row */}
                     <p>Action</p>
 
                     <div className={Styles.cards}>
-
-                        {image.map((da) => {
-                            return <img src={getPosterURL(da.poster_path)} alt={da.title} key={da.id}/>
-                        })}
-
+                        <div className={Styles.scroll}>
+                            {image.map((da, index) => {
+                                return index < 7 ? (
+                                    <img
+                                        src={getPosterURL(da.poster_path)}
+                                        alt={da.title}
+                                        key={da.id}
+                                    />
+                                ) : (
+                                    ""
+                                );
+                            })}
+                        </div>
                     </div>
-                </> : "all ok"}
+
+                </>
+            ) : (
+                "all ok"
+            )}
         </div>
     )
 }
